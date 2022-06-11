@@ -33,22 +33,18 @@ function App() {
       <header>
         <Header />
       </header>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        {!isLoggedIn ? (
-          <>
-            <Route path='/login' element={<Login />} />
-            <Route path='/signup' element={<Signup />} />
-          </>
-        ) : (
-          <>
-            <Route path='/blogs' element={<Blogs />} />
-            <Route path='/blogs/add' element={<AddBlog />} />
-            <Route path='/myBlogs' element={<UserBlogs />} />
-            <Route path='/myBlogs/:id' element={<BlogDetail />} />{" "}
-          </>
-        )}
-      </Routes>
+
+      <main>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='/blogs/add' element={<AddBlog />} />
+          <Route path='/myBlogs' element={<UserBlogs />} />
+          <Route path='/myBlogs/:id' element={<BlogDetail />} />{" "}
+        </Routes>
+      </main>
     </div>
   );
 }
